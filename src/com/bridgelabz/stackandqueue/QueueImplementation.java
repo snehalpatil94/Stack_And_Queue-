@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Queue display and insert methods
  * 
- * @author : Snehal Patil 
+ * @author : Snehal Patil
  */
 public class QueueImplementation {
 	Node top;
@@ -17,7 +17,7 @@ public class QueueImplementation {
 
 		do {
 			System.out.println("Operations menu : ");
-			System.out.println("1. To display \n2. To insert Element \n3. To exit");
+			System.out.println("1. To display \n2. To Insert Element \n3. To Delete element \n4. To exit");
 			int choice = sc.nextInt();
 			switch (choice) {
 			case 1:
@@ -29,6 +29,10 @@ public class QueueImplementation {
 				System.out.println("Enter element to insert into the queue : ");
 				int element = sc.nextInt();
 				enQueue(element);
+				System.out.println("------------------------------------------------------\n");
+				break;
+			case 3:
+				deQueue();
 				System.out.println("------------------------------------------------------\n");
 				break;
 			default:
@@ -46,7 +50,7 @@ public class QueueImplementation {
 	// Display method
 	public void display() {
 		if (front == null)
-			System.out.println("Queue is empty");
+			System.out.println("Queue is empty !");
 		else {
 			Node temp = front;
 			while (temp.next != null) {
@@ -68,5 +72,18 @@ public class QueueImplementation {
 			rear.next = node;
 			rear = node;
 		}
+	}
+
+	// Method to delete element
+	public void deQueue() {
+		if (front == null) {
+			System.out.println("Queue is empty !");
+		}
+		Node temp = front;
+		System.out.println("Removing " + temp.data);
+		front = front.next;
+
+		if (front == null)
+			rear = null;
 	}
 }

@@ -3,7 +3,7 @@ package com.bridgelabz.stackandqueue;
 import java.util.Scanner;
 
 /**
- * Program to stack implementation push operation
+ * Ability to peak and pop from the Stack till it is empty
  * 
  * @author : Snehal Patil
  * 
@@ -14,7 +14,7 @@ public class StackMain {
 		System.out.println();
 
 		StackImplementation stackImplementation = new StackImplementation();
-		
+
 		// Calling operation menu method of StackImplementation
 		stackImplementation.operationsMenu();
 	}

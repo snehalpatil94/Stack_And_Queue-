@@ -3,7 +3,7 @@ package com.bridgelabz.stackandqueue;
 import java.util.Scanner;
 
 /**
- * Ability to create Queue
+ * Ability to dequeue from the beginning
  * 
  * @author : Snehal Patil
  * 
